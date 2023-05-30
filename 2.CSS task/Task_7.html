@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CSS Task 6</title>
+
+	<style type="text/css">
+		#sidenav a{
+			position: absolute;
+			left: -80px;
+			transition: 0.3s;
+			padding: 15px;
+			width: 100px;
+			text-decoration: none;
+			font-size: 20px;
+			color: white;
+			border-radius: 0 5px 5px 0;
+		}
+		#sidenav a:hover{
+			left: 0;
+		}
+		#about{
+			background-color: green;
+			top: 20px;
+		}
+		#blog{
+			background-color: blue;
+			top: 80px;
+		}
+		#projects{
+			background-color: red;
+			top: 140px;
+		}
+		#contact{
+			background-color: gray;
+			top: 200px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="sidenav">
+		<a href="#" id="about">About</a>
+		<a href="#" id="blog">Blog</a>
+		<a href="#" id="projects">Projects</a>
+		<a href="#" id="contact">Contact</a>
+	</div>
+	<div style="margin-left: 80px;">
+		<h2>Hoverable Sidenav Buttons</h2>
+		<p>Hover over the buttons in the left side navigation to open them</p>
+	</div>
+</body>
+</html>
