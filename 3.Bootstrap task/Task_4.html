@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Bootstrap Task4</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+        <style>
+            .navbar{
+                padding: 16px;
+                box-shadow: 0px 15px 10px -15px #111;
+            }
+            a{
+                margin-left: 16px;
+                margin-right: 16px;
+                text-decoration: none;
+                color: black;
+            }
+            .container{
+                padding: 30px;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+
+            }
+            .row{
+                margin-left: 100px;
+            }
+            .card{
+                width: 16rem;
+                height: 20rem;
+                padding: 0;
+                margin: 16px;
+                box-shadow: 0px 15px 10px -15px #111;
+            }
+            main .btn{
+                width: 100%;
+            }
+            .col-lg-3{
+                text-align: left;
+            }
+            .col-lg-3 p{
+                line-height: 10px;
+            }
+            footer{
+                padding: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="float-start">Company name</div>
+            <div class="float-end">
+                <a href="#features">Features</a>
+                <a href="#">Enterprise</a>
+                <a href="#">Support</a>
+                <a href="#">Pricing</a>
+                <button class="btn btn-outline-primary">Sign up</button>
+            </div>
+        </nav>
+
+        <main class="container">
+            <h3>Pricing</h3>
+            <p>Quickly build an effective pricing table for your potential customers with this
+                Bootstrap example.It's built with default Bootstrap components and utilities
+                with little customization.
+            </p>
+
+            <div class="row">
+                <div class="card">
+                    <h4 class="card-header">Free</h4>
+                    <div class="card-body">
+                        <p style="font-size: 20px;"><b>$0</b> / mo</p>
+                        <p>10 users included 2GB of storage Email support Help center access</p>
+                        <button class="btn btn-outline-primary">Sign up for free</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 class="card-header">Pro</h4>
+                    <div class="card-body">
+                        <p style="font-size: 20px;"><b>$15</b> / mo</p>
+                        <p>20 users included 10GB of storage Priority Email support Help center access</p>
+                        <button class="btn btn-primary">Get started</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 class="card-header">Enterprise</h4>
+                    <div class="card-body">
+                        <p style="font-size: 20px;"><b>$29</b> / mo</p>
+                        <p>30 users included 15GB of storage Phone and Email support Help center access</p>
+                        <button class="btn btn-primary">Contact us</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-lg-3 col-md-2">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <p>&copy; 2023</p>
+                </div>
+
+                <div class="col-lg-3 col-md-2" id="features">
+                    <p><b><a>Features</a></b></p>
+                    <p><a href="#">cool stuff</a></p>
+                    <p><a href="#">Random feature</a></p>
+                    <p><a href="#">Team feature</a></p>
+                </div>
+
+                <div class="col-lg-3 col-md-2">
+                    <p><b><a>Resources</a></b></p>
+                    <p><a href="#">Resource</a></p>
+                    <p><a href="#">Resource Name</a></p>
+                    <p><a href="#">Other Resources</a></p>
+                </div>
+
+                <div class="col-lg-3 col-md-2">
+                    <p><b><a>About</a></b></p>
+                    <p><a href="#">Team</a></p>
+                    <p><a href="#">Location</a></p>
+                    <p><a href="#">Privacy</a></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
