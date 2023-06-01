@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Task 10</title>
+    </head>
+
+    <body>
+        <h1>JS Array methods</h1>
+        <p>view the console to see the results</p>
+
+        <script>
+            console.clear();
+            var arr1=[1,2,3,4,5,6];
+            var arr2=["vit","vellore","chennai","bhopal","amaravathi"];
+            console.log(arr1);
+
+            console.log("length of array");
+            console.log(arr1.length);
+            
+            console.log("concating two arrays");
+            console.log(arr1.concat(arr2));
+
+            console.log("insert element by index");
+            arr1[2]=10;
+            console.log(arr1);
+
+            console.log("add element at last");
+            arr1.push(50);
+            console.log(arr1);
+
+            console.log("remove element at last");
+            arr1.pop();
+            console.log(arr1);
+
+            console.log("sort by ascending order");
+            console.log(arr2.sort());
+
+            console.log("sort by descending order");
+            console.log(arr2.reverse());
+
+            console.log("delete set of elements");
+            console.log(arr1.splice(2,2));
+            console.log(arr1);
+
+            console.log("array map function");
+            arr2.map(function(value,index){
+                console.log(value);
+            })
+
+            console.log("Every method (val<5)");
+            console.log(arr1.every((value)=>value<5));
+            console.log(arr1);
+
+            console.log("some method (val<5)");
+            console.log(arr1.some((value)=>value<5));
+
+            console.log("filter method (val<5)");
+            console.log(arr1.filter((value)=>value<5));
+
+            console.log("find method (val<5) gives element");
+            console.log(arr1.find((value)=>value<5));
+
+            console.log("findindex method (val<5) gives index");
+            console.log(arr1.findIndex((value)=>value<5));
+
+            console.log("toString method");
+            console.log(arr1.toString());
+
+            console.log("join method");
+            console.log(arr1.join('!'));
+
+            console.log("add element at first unshift method");
+            console.log(arr2.unshift("SRM"));
+            console.log(arr2);
+            
+            console.log("remove element at first shift method");
+            console.log(arr2.shift());
+
+            console.log("remove set of element at first slice method");
+            console.log(arr2.slice(2));
+        </script>
+    </body>
+</html>

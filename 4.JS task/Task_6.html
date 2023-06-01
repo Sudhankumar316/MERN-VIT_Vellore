@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Task 6</title>
+
+	<script type="text/javascript">
+		function order_str() {
+			var str=document.getElementById("str").value;
+			var str_rev=str.split('').sort().join('');
+			document.getElementById("result").innerHTML=str_rev;
+		}
+	</script>
+</head>
+<body>
+	Enter String:	<input type="text" name="str" id="str"><br>
+	<button onclick="order_str()">Order It</button>
+	<p>Ordered String:</p>
+	<p id="result" style="color: green;"></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>JS Task8</title>
+
+        <style>
+            .body{
+                text-align: center;
+            }
+
+            img{
+                animation-name: train;
+                animation-direction: normal;
+                animation-duration: 10s;
+                position: relative;
+            }
+            @keyframes train{
+                from{
+                    margin-left: 0%;
+                }
+                to{
+                    margin-left: 60%;
+                }
+            }
+        </style>
+
+        <script>
+            function start(){
+                document.getElementById("train").style.animationPlayState='running';
+            }
+            function stop(){
+                document.getElementById("train").style.animationPlayState='paused';
+            }
+        </script>
+    </head>
+
+    
+    <body>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGjpPLmzJkkcLwjIFsMosUS1cG9c7ONN790A&usqp=CAU" alt="train" style="animation-name: train;" id="train">
+        <div class="body">
+            <h2 style="color: navy;">click the following buttons to handel the animation</h2>
+            <button onclick="start()">Start</button>
+            <button onclick="stop()">Stop</button>
+        </div>
+    </body>
+</html>

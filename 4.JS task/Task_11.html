@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Task 11</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    
+        <style>
+            .container{
+                background-image: linear-gradient(rgb(250, 250, 197),rgb(232, 89, 205));
+                padding: 50px;
+                color: black;
+                font-size: large;
+                font-family: 'Times New Roman', Times, serif;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            .col-form-label{
+                font-weight: bold;
+            }
+            span{
+                color: red  ;
+            }
+        </style>
+
+        <script>
+            function validate(){
+                var fname=document.getElementById("fname").value;
+                var lname=document.getElementById("lname").value;
+                var email=document.getElementById("email").value;
+                var pwd=document.getElementById("pwd").value;
+                var cnfpwd=document.getElementById("cnfpwd").value;
+                var age=document.getElementById("age").value;
+                var phone=document.getElementById("phone").value;
+                var address=document.getElementById("address").value;
+                var state=document.getElementById("state").value
+                var returnvalue=true;
+
+                if(fname=="" || fname==null){
+                    document.getElementById("req_fname").innerHTML="POOR";
+                    returnvalue=false;
+                }
+                else{
+                    document.getElementById("req_fname").innerHTML="";
+                    returnvalue =true;
+                }
+                
+                if(lname=="" || lname==null){
+                    document.getElementById("req_lname").innerHTML="POOR";
+                    returnvalue=false;
+                }
+                else{
+                    document.getElementById("req_lname").innerHTML="";
+                    returnvalue =true;
+                }
+
+                if(email=="" || email==null){
+                    document.getElementById("req_email").innerHTML="POOR";
+                    returnvalue=false;
+                }
+                else{
+                    document.getElementById("req_email").innerHTML="";
+                    returnvalue =true;
+                }
+
+                if(pwd=="" || pwd==null){
+                    document.getElementById("req_pwd").innerHTML="POOR";
+                    returnvalue=false;
+                }
+                else{
+                    document.getElementById("req_pwd").innerHTML="";
+                    returnvalue =true;
+                }
+
+                if(cnfpwd=="" || cnfpwd!=pwd){
+                    document.getElementById("req_cnfpwd").innerHTML="POOR or MISMATCH";
+                    returnvalue=false;
+                }
+                else{
+                    document.getElementById("req_cnfpwd").innerHTML="";
+                    returnvalue =true;
+                }
+
+                if(age=="" || pwd==null){
+                    document.getElementById("req_age").innerHTML="POOR";
+                    returnvalue=false;
+                }
+                else{
+                    document.getElementById("req_age").innerHTML="";
+                    returnvalue =true;
+                }
+
+                if(phone=="" || phone==null){
+                    document.getElementById("req_phone").innerHTML="POOR";
+                    returnvalue=false;
+                }
+                else{
+                    document.getElementById("req_phone").innerHTML="";
+                    returnvalue =true;
+                }
+
+                if(address=="" || address==null){
+                    document.getElementById("req_address").innerHTML="POOR";
+                    returnvalue=false;
+                }
+                else{
+                    document.getElementById("req_address").innerHTML="";
+                    returnvalue =true;
+                }
+
+                if(state=="" || state==null){
+                    document.getElementById("req_state").innerHTML="POOR";
+                    returnvalue=false;
+                }
+                else{
+                    document.getElementById("req_state").innerHTML="";
+                    returnvalue =true;
+                }
+                return returnvalue;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 style="text-align: center;color: blue;">Registration Form</h1>
+            <form onsubmit="return validate()">
+                <div class="row mb-4 mt-3">
+                    <div class="col-sm-2"><label for="fname" class="col-form-label">First Name</label></div>
+                    <div class="col-sm-10">
+                        <input type="text" class="col-8" id="fname">
+                        <span id="req_fname" class="col-2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4 mt-3">
+                    <label for="lname" class=" col-sm-2 col-form-label">Last Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="col-8" id="lname">
+                        <span id="req_lname" class="col-2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4 mt-3">
+                    <label for="email" class=" col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="col-8" id="email" >
+                        <span id="req_email" class="col-2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4 mt-3">
+                    <label for="pwd" class=" col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="col-8" id="pwd" >
+                        <span id="req_pwd" class="col-2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4 mt-3">
+                    <label for="cnfpwd" class=" col-sm-2 col-form-label">Confirm Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="col-8" id="cnfpwd" >
+                        <span id="req_cnfpwd" class="col-2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <label class="col-sm-2 col-form-label">Gender</label>
+                    <div class="col-sm-10" >
+                        <lable for="male">Male:</lable> <input type="radio" id="male" value="male">
+                        <label for="female">Female:</label> <input type="radio" id="female" value="female">
+                        <span id="req_gender" class="col-2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4 mt-3">
+                    <label for="age" class=" col-sm-2 col-form-label">Age</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="col-8" id="age" max="200" min="1">
+                        <span id="req_age" class="col-2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4 mt-3">
+                    <label for="phone" class=" col-sm-2 col-form-label">Phone Number</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="col-8" id="phone" maxlength="10">
+                        <span id="req_phone" class="col-2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <label for="address" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                        <textarea id="address" rows="3" cols="10" class="col-8"></textarea>
+                        <span id="req_address" class="col-2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4 mt-3">
+                    <div class="col-sm-2"><label for="state" class="col-form-label">State</label></div>
+                    <div class="col-sm-10">
+                        <input type="text" class="col-8" id="state">
+                        <span id="req_state" class="col-2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <label class="col-sm-2 col-form-label">Contry</label>
+                    <div class="col-sm-10">
+                        <select class="col-8">
+                            <option value="choose your contry">choose your contry</option>
+                            <option value="india">India</option>
+                            <option value="russia">Russia</option>
+                            <option value="america">America</option>
+                            <option value="africa">Africa</option>
+                            <option value="china">China</option>
+                        </select>
+                        <span id="req_contry" class="col-2"></span>
+                    </div>
+                </div>
+                
+                <div class="row mb-4">
+                    <label class="col-sm-2 col-form-label">Languages known</label>
+                    <div class="col-sm-10" >
+                        <input type="checkbox" id="english" value="english">English
+                        <input type="checkbox" id="tamil" value="tamil">Tamil
+                        <input type="checkbox" id="telugu" value="telugu">Telugu
+                        <input type="checkbox" id="hindi" value="hindi">Hindi
+                        <span id="req_language" class="col-2"></span>
+                    </div>
+                </div>
+
+                <input type="checkbox" checked>Hereby I declare all the given details are true.
+                <p style="text-align: center;font-size: 20px;">Log in to <a href="https://www.ethnus.com">Ethnus</a> website</p> 
+
+                <div style="text-align: center;">
+                <input type="submit" class="btn btn-danger btn-lg" value="Register"></div>
+            </form>
+        </div>
+    </body>
+</html>
